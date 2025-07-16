@@ -4,9 +4,8 @@
     box-sizing: border-box;
 }
 
-body {
-    width: 100vw;
-    height: 100vh;
+html, body {
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,7 +14,8 @@ body {
 
 div.container {
     width: 500px;
-    height: 500px;
+    height: 600px;
+    padding: 10px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -29,18 +29,57 @@ div.container h1 {
     padding: 20px;
 }
 
-div.search {
+div.container div.search {
     width: 100%;
     display: flex;
 }
 
-div.search input[type="text"] {
+div.container div.search input[type="text"] {
     width: 90%;
     padding: 5px;
     border-radius: 15px 0px 0px 15px;
 }
 
-div.search button {
+div.container div.search button {
     flex: 1;
     padding: 5px 10px;
+}
+
+div.container div.show-book {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+div.container div.show-book div.card-book {
+    margin-top: 30px;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div.container div.show-book div.card-book > div.img-book {
+    width: 300px;
+    height: 350px;
+    border-radius: 20px 10px 0px 0px
+}
+
+div.container div.show-book div.card-book > div.img-book img {
+    width: 100%;
+    height: 350px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+div.container div.show-book div.card-book div.title-book {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 0px 20px 20px;
+    border: 1px solid black;
 }
