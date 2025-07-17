@@ -4,15 +4,15 @@ interface BookProps {
     description: string;
 }
 
-export default class Book {
-    urlImage: string;
-    title: string;
-    description: string;
+export default class Book implements BookProps {
+    
 
-    constructor({ urlImage, title, description }: BookProps) 
+    constructor(
+        public urlImage: string,
+        public title: string,
+        public description: string
+    ) 
     {
-        this.urlImage = urlImage;
-        this.title = title;
-        this.description = description;
+        
     }
 }
