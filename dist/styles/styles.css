@@ -63,16 +63,44 @@ div.container div.show-book div.card-book {
 }
 
 div.container div.show-book div.card-book > div.img-book {
+    position: relative;
     width: 300px;
     height: 350px;
-    border-radius: 20px 10px 0px 0px
+    border-radius: 20px 10px 0px 0px;
+    overflow: hidden;
+    cursor: pointer;
 }
 
 div.container div.show-book div.card-book > div.img-book img {
     width: 100%;
     height: 350px;
     border-radius: 20px 20px 0px 0px;
+    display: block;
 }
+
+.img-book .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* fundo escuro com transparência */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Efeito de aparecer quando passa o mouse */
+.img-book:hover .overlay {
+    opacity: 1;
+}
+
 
 div.container div.show-book div.card-book div.title-book {
     flex: 1;
@@ -82,4 +110,42 @@ div.container div.show-book div.card-book div.title-book {
     align-items: center;
     border-radius: 0px 0px 20px 20px;
     border: 1px solid black;
+}
+
+div.container div.show-book div.card-book div.title-book h3 {
+    text-align: center;
+}
+
+div.container div.show-book button {
+    width: 50px;
+    height: 50px;
+    padding: 20px;
+    color: white;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+div.container div.show-book button.next {
+    font-size: 32px;
+    background-color: rgb(12, 197, 12);
+}
+
+div.container div.show-book button.return {
+    font-size: 32px;
+    background-color: rgb(214, 18, 18);
+}
+
+div.container .description {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 14px;
+    color: black;
+}
+
+div.container .description p {
+    color: black;
 }
